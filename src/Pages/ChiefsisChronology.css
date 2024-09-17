@@ -1,0 +1,36 @@
+.chief-section{
+    /* background-color: red; */
+    /* height: 100vh; */
+    padding: 40px 0px;
+    width: 100vw;
+}
+
+.chief-card{
+    width: 350px;
+    /* padding: 15px; */
+    background-color: white;
+
+}
+
+.highlight-new{
+    color: #2BB32A;
+}
+
+.image{
+    background-color: red;
+    width: 100%;
+    height: 50%;
+}
+
+.card-desc{
+    padding: 10px;
+}
+
+.card-groups{
+    display: flex;
+}
+
+.error{
+    color: white;
+    text-align: center;
+}

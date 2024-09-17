@@ -1,0 +1,39 @@
+.features{
+    height: 250px;
+    width: 100vw;
+    background: transparent;
+    color: white;
+
+}
+
+.heading{
+    text-align: center;
+    /* margin: 10px 0px; */
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.content-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 370px;
+    padding-top: 60px;
+
+}
+
+.shadow{
+    background-color: #3D544D;
+    border-radius: 10px;
+    padding: 3px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

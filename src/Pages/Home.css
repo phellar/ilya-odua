@@ -1,0 +1,293 @@
+.hero-section{
+    height: 100vh;
+    width: 100vw;
+    background: url('../assets/WPSK2692.JPG') no-repeat center center/cover;
+  
+}
+
+.over{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.hero-content p{
+   width: 450px;
+   margin-top: 32px;
+   line-height: 1.2;
+   margin-bottom: 15px
+}
+
+.head-1{
+    font-size: 130px;
+    color: #2BB32A;
+    font-style: italic;
+}
+
+.wrapper{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    flex-direction: column;
+    line-height: 1.2;
+    padding-top: 10%;
+}
+.wrapper p{
+    font-size: 22px;
+}
+
+.wrapper h1{
+    font-size: 26px;
+}
+
+.CTA{
+    background-color: #2BB32A;
+    color: white;
+    padding: 10px; 
+    border-radius: 50px;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* history section */
+
+.history{
+    /* height: 100vh; */
+    width: 100vw;
+    padding-top: 40px;
+  }
+
+  .two-box{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    line-height: 1.5;
+  }
+
+  .info{
+    width: 500px;
+    color: white;
+    line-height: 1.5;
+  }
+
+  .info h1{
+    font-size: 50px;
+  }
+  
+  .img-new{
+    background: url('../assets/baba.JPG') no-repeat center center/cover; 
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+  }
+
+  
+  /* WHY JOIN KEGITES */
+  .join{
+    /* height: 100vh; */
+    width: 100vw;
+    padding: 100px 0px;
+    padding-top: 60px;
+    color: white;
+  }
+
+  .join h1{
+    font-size: 50px;
+  }
+  .join p{
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .card-wrapper{
+    height: 200px;
+    width: 200px;
+    padding: 15px 0px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  .icon{
+    background-color: #3D544D;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+  
+  .img-2{
+    background: url('../assets/ilya.jpeg') no-repeat center center/cover;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  .gallery{
+    /* height: 800px; */
+    width: 100vw;
+    padding: 60px 0px;
+    color: white;
+    line-height: 1.5;
+  }
+
+  .gallery h1{
+    font-size: 45px;
+  }
+  .gallery p{
+    font-size: 18px;
+  }
+
+  .card-group{
+    padding-top: 45px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    padding-bottom: 30px;
+  }
+
+  .card-1{
+    height: 400px;
+    /* width: 400px; */
+    background: url('../assets/JLOZ5351.JPG') no-repeat center center/cover;
+    border-radius: 10px;
+  }
+  .card-2{
+    height: 400px;
+    /* width: 400px; */
+    background: url(../assets/SMUF6286.JPG) no-repeat center center/cover;
+    border-radius: 10px;
+  }
+  .card-3{
+    height: 400px;
+    /* width: 400px; */
+    background: url(../assets/UDUH1087.JPG) no-repeat center center/cover;
+    border-radius: 10px;
+  }
+
+  .ce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .head-1{
+        font-size: 65px;
+    }
+    .wrapper{
+        line-height: 1.5;
+        padding-top: 35%;
+    }
+    .wrapper p{
+        font-size: 20px;
+    }
+    
+    .wrapper h1{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .two-box{
+        padding-left: 20px;
+        flex-direction: column;
+      }
+
+      .info{
+        width: 350px;
+        margin-top: 15px;
+      }
+
+      .info p{
+       text-align: justify;
+      }
+
+      .img-new{
+        margin-top: 20px;
+        height: 300px;
+        width: 300px;
+      }
+
+      .card-wrapper{
+        height: 250px;
+        width: 300px;
+      }
+
+      .join{
+        /* height: 100vh; */
+        width: 100vw;
+        padding: 100px 0px;
+      }
+
+      .join h1{
+        font-size: 38px;
+      }
+
+      .heading{
+        padding-left: 20px;
+      }
+
+      .card-group{
+        display: block;
+      }
+
+      .card-1{
+        margin: 20px 0px;
+      }    
+      .card-3{
+        margin: 20px 0px;
+      }    
+      .card-2{
+        margin: 20px 0px;
+      } 
+
+      .img-2{
+        height: 350px;
+        width: 350px;
+
+      }
+    
+}
+
+
+
+@media screen and (max-width: 376px) {
+  .info{
+    width: 300px;
+  }
+
+}
+
+@media screen and (max-width: 325px) {
+ 
+  .head-1{
+    font-size: 55px;
+}
+
+.wrapper h1{
+  font-size: 18px;
+}
+
+.info h1{
+  font-size: 40px;
+}
+.info {
+  width: 280px;
+}
+
+
+.img-2{
+  width: 280px;
+  height: 280px;
+}
+.img-new{
+  width: 280px;
+  height: 280px;
+}
+}
