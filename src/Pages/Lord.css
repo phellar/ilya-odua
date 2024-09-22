@@ -1,0 +1,54 @@
+.lord-card{
+    /* height: 500px; */
+    width: 300px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: white;
+}
+
+
+.card-group-new{
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+}
+
+.lord-img img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+.heading-new{
+    color: white;
+    padding: 0;
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.heading-new p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+   
+}
+.heading-new h1{
+    padding: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .heading-new h1{
+        padding: 0px;
+        font-size: 45px;
+    }
+
+    .card-group-new{
+        display: flex;
+        justify-content: center;
+    
+    }
+}

@@ -5,6 +5,10 @@ nav{
    /* padding-top: 15px; */
 }
 
+.logo{
+    width: 50px;
+}
+
 header{
     background-color: white;
     padding: 15px;

@@ -22,15 +22,15 @@ const Header = () => {
     <header>
         <div className="container">
         <nav>
-          <img src={Logo} alt="logo" width={'50'} />
+          <img src={Logo} className='logo' alt="logo" width={'50'} />
           <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/chiefsischronology">Cheifesis chrinology</Link></li>
-          <li><Link to="/lord">List of present lord</Link></li>
-          <li><Link to="/patrons">List of patrons</Link></li>
-          <li><Link to="/">Roll Call of Members</Link></li>
-          <li><Link to="/">Activities of Ilya Odua</Link></li>
-          {/* <li><Link to="/">Ilya in whole gallery</Link></li> */}
+          <li><Link to="/history-ilya-Odua">History of Ilya Odua</Link></li>
+          <li><Link to="/lord">present lords</Link></li>
+          <li><Link to="/patrons">Patrons</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/chiefsischronology">Cheifesis chronology</Link></li>
+          <li><Link to="/KegYear">Register as Chief</Link></li>
           </ul>
 
 
@@ -39,14 +39,13 @@ const Header = () => {
           </div>  
 
           {isToggle && <div className="mobile-menu-item">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/chiefsischronology">Cheifesis chrinology</Link></li>
-                <li><Link to="/lord">List of present lord</Link></li>
-                <li><Link to="/patrons">List of patrons</Link></li>
-                <li><Link to="/">Roll Call of Members</Link></li>
-                <li><Link to="/">Activities of Ilya Odua</Link></li>
+            <li><Link to="/">Home</Link></li>
+          <li><Link to="/history-ilya-Odua">History of Ilya Odua</Link></li>
+          <li><Link to="/lord">present lords</Link></li>
+          <li><Link to="/patrons">Patrons</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/chiefsischronology">Cheifesis chronology</Link></li>
                 <li><Link to="/KegYear">Register as Chief</Link></li>
-                {/* <li><Link to="/">Ilya in whole gallery</Link></li> */}
           </div>
             
             

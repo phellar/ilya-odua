@@ -14,7 +14,7 @@ const ChiefsisChronology = () => {
         const fetchCheifs = async ()=>{
             const {data,error} = await supabase
             .from('cheif')
-            .select()
+            .select('*')
             if(error){
                 setFetchError('Unable to fetch chief data')
                 setChiefs(null)
@@ -22,6 +22,7 @@ const ChiefsisChronology = () => {
             }
 
             if(data){
+                console.log(data)
                 setChiefs(data)
                 setFetchError(null)
             }
@@ -39,30 +40,30 @@ const ChiefsisChronology = () => {
     <section className='chief-section'>
         <div className="container">
             {fetchError && (<p className='error'>{fetchError}</p>)}
-            <div className="card-groups">
                 {chiefs && (
-                
-                        <div className='chief-card'>
-                            <div className="chief-info">
+                    
+                    <div className="card-groups">
                                 {chiefs.map(chief => (
                                     <>
-                                    <div className="image">
-                                        <img src={chief.picture} alt="chief image" className='chief-img' />
-                                        {/* {chief.picture} */}
-                                    </div>
-                                    <div className="card-desc">
-                                        <h3 className='highlight-new'>{chief.FullName}</h3>
-                                        <p>{chief.email}</p>
-                                        <p>Keg Year : {chief.kegyear}</p>
+                                    <div className='chief-card'>
+                                        <div className="image">
+                                            <img src={chief.picture} alt="chief image" className='chief-img' />
+                                            {/* {chief.picture} */}
+                                        </div>
+                                        <div className="card-desc">
+                                            <h3 className='highlight-new'>{chief.FullName}</h3>
+                                            <p>{chief.email}</p>
+                                            <p>Keg Year : {chief.kegyear}</p>
+                                        </div>
+                            
                                     </div>
                                     </>
                                 ))}
-                            </div>
-                        </div>
+                        
+                    </div>
                 )}
-
             </div>
-        </div>
+
     </section>
     </>
   )

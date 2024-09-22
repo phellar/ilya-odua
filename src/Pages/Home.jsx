@@ -5,7 +5,7 @@ import Footer from '../Component/Footer'
 import './Home.css'
 import { Link } from 'react-router-dom'
 // import Baba from '../assets/baba.jpg'
-import Upload from '../Component/Upload'
+
 
 const Hero = () => {
 
@@ -49,7 +49,7 @@ const Hero = () => {
                   </div>
               </div>
 
-              <Upload/>
+              
             </section>
 
 
@@ -104,7 +104,7 @@ const Hero = () => {
                       <p>There is no river without a source, every river flows from a fountain, just as every tree was once a seed. 
                         Ilya Odua was the mustard seed planted many decades ago, but today has become an oak</p>
                             <div class="cta">
-                              <Link to='/' className='CTA'>Read More</Link>
+                              <Link to='/history-ilya-Odua' className='CTA'>Read More</Link>
                             </div>
                     </div>
                   </div>

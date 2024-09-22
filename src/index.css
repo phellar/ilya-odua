@@ -73,6 +73,14 @@ small{
   border-radius: 2px;
 }
 
+h1,h2,h3{
+  text-align: start;
+}
+
+
+.heading{
+  text-align: start;
+}
 
 @media screen and (max-width: 768px) {
 
