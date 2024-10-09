@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Component/Header'
 import Footer from '../Component/Footer'
 // import Shrine from '../assets/shrine.jpg'
+
 import Logo from '../assets/logo.jpg'
 
 import './IlyaHistory.css'
@@ -22,7 +23,7 @@ const HistoryIlyaOdua = () => {
                 <div class="img-2"></div>
                 There is no river without a source, every river flows from a fountain, just as every tree was once a seed. Ilya Odua
                  was the mustard seed planted many decades ago, but today has become an oak in the Supreme Comradium.
-                (Picture of the Shrine).
+                 <div className="shrine"></div>
                 The Ilya prides itself in the promotion of African culture, love, harmonious co-existence and advocacy for peace
                 </p>
 
@@ -133,7 +134,7 @@ const HistoryIlyaOdua = () => {
                 Kegites tree when attending a comradic function at Abraka, Delta State, while Hamzat Kayode, aka Baba Kay became the new AB World during 
                 85/86 keg year.
                 <br/>
-                (Picture of Keg of office)
+                <div className="office"></div>
                 <br/>
                 </p>
 
@@ -184,7 +185,7 @@ const HistoryIlyaOdua = () => {
                 The Ilya also possess a personalized sound system for ease of comradic jollification within the Ilya.
                 With the help of baba Eledumare, the all knowing and giver of all good things.
                 <br/> 
-                (PICTURE OF THE SOUND SYSTEM)
+                <div className="sound"></div>
                 <br/> 
                 The Ilya hope to have a bus to ease her daily movements and activities within comradic spheres.
                 <br/> 

@@ -10,8 +10,6 @@ import HistoryIlyaOdua from './Pages/HistoryIlyaOdua'
 import ChiefsisChronology from './Pages/ChiefsisChronology'
 import Upload from './Pages/Upload'
 import Gallery from './Pages/Gallery'
-import { SupabaseProvider } from './Context/SupabaseContext'
-import { ImageProvider } from './Context/ImageContext'
 import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import Image from './Pages/Image'
 
@@ -26,8 +24,7 @@ function App() {
 
   return (
     <div className="overlay">
-      <ImageProvider>
-      <SupabaseProvider>
+     
         <Router>
           <Routes>
           <Route exact path='/' element={<Home/>} />
@@ -42,8 +39,7 @@ function App() {
          
           </Routes> 
         </Router>
-      </SupabaseProvider>
-      </ImageProvider>
+
       
     </div>
   )

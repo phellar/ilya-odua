@@ -55,6 +55,18 @@ ul li{
     width: 100%;
 }
 
+.office{
+    background: url(../assets/office.JPG) no-repeat center center/cover;
+    height: 700px;
+    margin-top: 20px;
+    width: 600px;
+}
+.sound{
+    background: url(../assets/QQCK6770.JPG) no-repeat center center/cover;
+    height: 700px;
+    margin-top: 20px;
+    width: 600px;
+}
 @media screen and (max-width: 768px) {
     .hist{
         /* height: 100vh; */
@@ -74,4 +86,14 @@ ul li{
         width: 100%;
         margin-bottom: 20px;
     }
+
+    .office{
+        height: 400px;
+        width: 100%;
+    }
+    .sound{
+        height: 400px;
+        width: 100%;
+    }
+    
 }

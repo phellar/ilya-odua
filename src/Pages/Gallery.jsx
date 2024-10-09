@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { SupabaseContext } from '../Context/SupabaseContext';
 import Induction from '../Component/Induction';
 import Header from '../Component/Header';
 import Footer from '../Component/Footer';
@@ -7,7 +6,7 @@ import Ressurection from '../Component/Ressurection';
 import './Gallery.css'
 
 const Gallery = () => {
-  const { imageUrls } = useContext(SupabaseContext);
+  
 
   return (
     <>

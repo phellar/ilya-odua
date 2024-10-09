@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { SupabaseContext } from '../Context/SupabaseContext';
 
 
 const Upload = () => {

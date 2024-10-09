@@ -4,7 +4,7 @@ import './Ressurection.css'
 const Ressurection = () => {
   return (
     <>
-    <h1>Ressurection Jara</h1>
+    <h1 className='res'>Ressurection Jara</h1>
     <div className="box">
         <img src="https://mpfxcjjgxqjenjxhiwju.supabase.co/storage/v1/object/public/image/resurrection/EWPS4469.JPG?t=2024-09-22T16%3A51%3A51.516Z" alt="" />
         <img src="https://mpfxcjjgxqjenjxhiwju.supabase.co/storage/v1/object/public/image/resurrection/BCFF4098.JPG" alt="" />
