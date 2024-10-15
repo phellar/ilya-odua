@@ -46,7 +46,7 @@
 .CTA{
     background-color: #2BB32A;
     color: white;
-    padding: 10px; 
+    padding: 12px; 
     border-radius: 50px;
     text-align: center;
     margin: 20px 0px;
@@ -67,13 +67,9 @@
     line-height: 1.5;
   }
 
-  .info{
-    width: 500px;
-    color: white;
-    line-height: 1.5;
-  }
+  
 
-  .info h1{
+  .info-new h1{
     font-size: 50px;
   }
   
@@ -87,10 +83,11 @@
   
   /* WHY JOIN KEGITES */
   .join{
-    /* height: 100vh; */
+    height: 700px;
     width: 100vw;
-    padding: 100px 0px;
-    padding-top: 60px;
+    /* padding: 100px 0px; */
+    padding-top: 80px;
+    /* background-color: red; */
     color: white;
   }
 
@@ -114,6 +111,8 @@
     border-radius: 5px;
     height: 50px;
     width: 50px;
+    font-size: 40px;
+    text-align: center;
     margin-bottom: 20px;
   }
 
@@ -200,12 +199,9 @@
         flex-direction: column;
       }
 
-      .info{
-        width: 350px;
-        margin-top: 15px;
-      }
+      
 
-      .info p{
+      .info-new p{
        text-align: justify;
       }
 
@@ -221,13 +217,16 @@
       }
 
       .join{
-        /* height: 100vh; */
+        height: 1200px;
         width: 100vw;
         padding: 100px 0px;
       }
 
       .join h1{
         font-size: 38px;
+      }
+      .join p{
+        font-size: 20px;
       }
 
       .heading{
@@ -275,10 +274,10 @@
   font-size: 18px;
 }
 
-.info h1{
+.info-new h1{
   font-size: 40px;
 }
-.info {
+.info-new {
   width: 280px;
 }
 

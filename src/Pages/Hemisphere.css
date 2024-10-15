@@ -1,0 +1,43 @@
+.hem{
+    padding: 20px 0px;
+    
+}
+
+p{
+    color: white;
+}
+ul li{
+    color: white;
+}
+
+.fa{
+    margin: 0px;
+    /* margin-bottom: 20px; */
+}
+
+h1{
+    font-size:28px;
+}
+
+.hem-box{
+    margin-bottom: 60px;
+    padding: 60px;
+    text-align: center;
+}
+.hem-box h1{
+    font-size: 45px;
+    text-align: center;
+}
+
+.fa h1{
+    padding: 0px;
+}
+@media screen and (max-width: 768px) {
+   h1{
+    font-size: 22px;
+   }
+
+   .hem-box h1{
+    font-size: 45px;
+}
+}

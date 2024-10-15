@@ -9,8 +9,9 @@ const Patrons = () => {
       <Header/>
       <section>
         <div className="container">
-          <div className="heading">
-          <h1> <span className='highlight'> Ilya Odua </span> Patrons</h1>        
+        <div className="headdd">
+      <h1 className='hhhhhhhh'><span className='highlight'>Ilya Odua</span> Patrons</h1>
+      {/* <p></p> */}
         </div>
             <div className="card-group-new">
                 <div className="lord-card">

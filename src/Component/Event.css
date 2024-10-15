@@ -1,0 +1,56 @@
+.event{
+    height: 800px;
+    width: 100vw;
+    padding: 30px 0px;
+    background-color: #ffffff38;
+}
+
+.event-img{
+    width: 100%;
+}
+
+.event-card{
+    background-color: white;
+    border-radius: 10px ;
+    width: 300px;
+    
+}
+
+.group{
+    display: flex;
+    padding: 20px;
+}
+
+.event-info{
+    padding: 0px 20px;
+}
+
+.event-head{
+    padding-bottom: 2rem;
+    font-size: 42px;
+    color: white;
+}
+
+#event-name{
+    padding-bottom: 30px;
+}
+
+
+.event-desc{
+    padding: 20px 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .event-head{
+        font-size: 36px;
+        text-align: center;
+        /* padding-left: 20px; */
+    }
+    .group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}

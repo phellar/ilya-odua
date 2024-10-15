@@ -7,6 +7,9 @@ import Header from '../Component/Header';
 import Footer from '../Component/Footer';
 
 const KegYear = () => {
+
+
+
   const notify = () => {
     toast.success('Information Submitted Successfully!', {
       position: "top-right",
@@ -20,6 +23,7 @@ const KegYear = () => {
     });
   };
 
+  // auto increment of kegyear
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 1985 + 1 }, (_, index) => 1985 + index);
 
@@ -33,73 +37,87 @@ const KegYear = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "picture") {
-      setForm({ ...form, picture: files[0] }); 
+    if (e.target.name === "picture") {
+      setForm({ ...form, picture: e.target.files[0] });
     } else {
-      setForm({ ...form, [name]: value });
+      setForm({ ...form, [e.target.name]: e.target.value });
     }
   };
 
+  // register member
   const handleRegister = async (e) => {
     e.preventDefault();
-
-    const { FullName, portfolio, kegyear, picture, dob, email } = form;
-    if (!FullName || !portfolio || !picture || !dob || !kegyear || !email) {
+  
+    const { FullName, portfolio, kegyear, dob, email } = form;
+    if (!FullName || !portfolio || !dob || !kegyear || !email) {
       alert('Please fill all the info');
       return;
     }
-
+  
     try {
-      // Upload the image file
-      const { data: uploadData, error: uploadError } = await supabase.storage
-        .from('image')
-        .upload(`pictures/${Date.now()}_${picture.name}`, picture);
-
-      if (uploadError) {
-        console.error('Error uploading file:', uploadError);
+      // Get file from input
+      const file = document.querySelector('#picture').files[0];
+  
+      // Ensure a file is selected
+      if (!file) {
+        alert('Please upload a picture');
         return;
       }
-
-      console.log('Image Path:', uploadData.path); 
-
-      // Get the public URL of the uploaded image
-      const { data: publicUrlData, error: urlError } = await supabase
+  
+      // Upload the file to the storage bucket
+      const { data: uploadData, error: uploadError } = await supabase
         .storage
-        .from('image')
-        .getPublicUrl(uploadData.path); // Ensure the file path is correct
-
+        .from('chief-image') // make sure the bucket name is correct
+        .upload(`members/${file.name}`, file); // check the path structure
+  
+      if (uploadError) {
+        console.error('Error uploading image:', uploadError);
+        return;
+      }
+  
+      // Generate the public URL of the uploaded image
+      const { data, error: urlError } = supabase
+        .storage
+        .from('chief-image')
+        .getPublicUrl(`members/${file.name}`, file);
+  
       if (urlError) {
-        console.error('Error generating public URL:', urlError);
+        console.error('Error getting public URL:', urlError);
         return;
       }
-
-      const publicURL = publicUrlData.publicURL;
-      console.log('Generated public URL:', publicURL); // Log the public URL
-
-      if (!publicURL) {
-        console.error('Public URL is undefined');
-        return;
-      }
-
-      // Insert the form data along with the public URL into the database
-      const { data, error } = await supabase
+  
+      
+  
+  
+      // Insert form data into the database, including the image URL
+      const { ChiefData, error } = await supabase
         .from('cheif')
-        .insert([{ FullName, portfolio, kegyear, dob, email, picture: publicURL }]);
-
+        .insert([{ 
+          FullName, 
+          portfolio, 
+          kegyear, 
+          dob, 
+          email, 
+          picture: data.publicUrl // Insert the image URL into the "picture" field
+        }]);
+  
       if (error) {
         console.error('Error inserting into database:', error);
-        return;
-      }
+      } 
 
-      console.log('Data inserted:', data);
+  
       notify(); // Show success notification
       setForm({ FullName: '', portfolio: '', kegyear: '', picture: null, dob: '', email: '' });
-
+       
+      
+      
     } catch (err) {
       console.error('Unexpected error:', err);
     }
   };
+  
+  
+  
 
   return (
     <>
@@ -107,8 +125,8 @@ const KegYear = () => {
       <section className='keg-year'>
         <div className="container">
           <div className="card-header">
-            <h1>Chief Registration Page</h1>
-            <p>Kindly Put in your information and the event that<br /> happened when you were a chief</p>
+            <h1 className='reg'>Members Registration Page</h1>
+            <p className='reg'>Kindly Put in your information and the event that<br /> happened when you were a member/chief</p>
           </div>
           <div className='two-form'>
             <div className='form'>
@@ -164,6 +182,7 @@ const KegYear = () => {
                   id="picture"
                   name="picture"
                   type="file"
+                  accept="image/*" 
                   onChange={handleChange}
                 />
               </div>
@@ -178,7 +197,10 @@ const KegYear = () => {
               </div>
 
               <div className="ce">
-                <button className='fullBtn' onClick={handleRegister}>Register</button>
+                  
+                <button className='fullBtn' onClick={handleRegister}>
+                  Submit
+                  </button>
               </div>
             </div>
             <div className="box-2"></div>
