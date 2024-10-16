@@ -9,6 +9,7 @@ import Footer from '../Component/Footer';
 const KegYear = () => {
 
 
+  const [loading, setLoading] = useState(false);
 
   const notify = () => {
     toast.success('Information Submitted Successfully!', {
@@ -55,6 +56,9 @@ const KegYear = () => {
     }
   
     try {
+
+      setLoading(true); // Start loading spinner
+
       // Get file from input
       const file = document.querySelector('#picture').files[0];
   
@@ -67,11 +71,12 @@ const KegYear = () => {
       // Upload the file to the storage bucket
       const { data: uploadData, error: uploadError } = await supabase
         .storage
-        .from('chief-image') // make sure the bucket name is correct
-        .upload(`members/${file.name}`, file); // check the path structure
+        .from('chief-image')
+        .upload(`members/${file.name}`, file); 
   
       if (uploadError) {
         console.error('Error uploading image:', uploadError);
+        setLoading(false); // Stop loading spinner
         return;
       }
   
@@ -83,6 +88,7 @@ const KegYear = () => {
   
       if (urlError) {
         console.error('Error getting public URL:', urlError);
+        setLoading(false); // Stop loading spinner
         return;
       }
   
@@ -98,11 +104,12 @@ const KegYear = () => {
           kegyear, 
           dob, 
           email, 
-          picture: data.publicUrl // Insert the image URL into the "picture" field
+          picture: data.publicUrl
         }]);
   
       if (error) {
         console.error('Error inserting into database:', error);
+        setLoading(false); // Stop loading spinner
       } 
 
   
@@ -114,6 +121,9 @@ const KegYear = () => {
     } catch (err) {
       console.error('Unexpected error:', err);
     }
+    finally {
+      setLoading(false); // Stop loading spinner after all actions
+    }
   };
   
   
@@ -122,13 +132,16 @@ const KegYear = () => {
   return (
     <>
       <Header />
+        
       <section className='keg-year'>
         <div className="container">
           <div className="card-header">
             <h1 className='reg'>Members Registration Page</h1>
-            <p className='reg'>Kindly Put in your information and the event that<br /> happened when you were a member/chief</p>
+            <p className='reg'>Kindly Put in your information for documentation<br /></p>
           </div>
+         
           <div className='two-form'>
+            
             <div className='form'>
               <div className="form-group">
                 <label htmlFor="FullName">Full Name</label>
@@ -189,21 +202,39 @@ const KegYear = () => {
 
               <div className="form-group">
                 <label htmlFor="portfolio">Portfolio</label>
-                <textarea placeholder='Enter Your Portfolio' id="portfolio"
-                  name="portfolio"
-                  onChange={handleChange}
-                  value={form.portfolio}>
-                </textarea>
+                <select id="portfolio" name="portfolio" value={form.portfolio} onChange={handleChange}>
+                  <option value="" disabled >Select Portfolio</option>
+                    <option value='Chief'>Chief</option>
+                    <option value='Elder'>Elder</option>
+                    <option value="Fẹda">Fẹda</option>
+                    <option value="Parrot">Parrot</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Philosopher">Philosopher</option>
+                    <option value="Drumito">Drumito</option>
+                    <option value="Songito">Songito</option>
+                    <option value="Marshall">Marshall</option>
+                    <option value="Fellow">Fellow</option>
+                    <option value="Senior Fellow">Senior Fellow</option>
+                    <option value="Life Senior Fellow">Life Senior Fellow</option>
+                    <option value="Patron">Patron</option>
+                    <option value="Grandpatron">Grandpatron</option>
+                    <option value="Shriner">Shriner</option>
+                    <option value="Transporter">Transporter</option>
+                    <option value="Welfarer">Welfarer</option>
+                    <option value="Welfaress">Welfaress</option>
+                    <option value="Le-Pour">Le-Pour</option>
+                    <option value="Tapper">Tapper</option>
+                </select>
               </div>
 
               <div className="ce">
-                  
                 <button className='fullBtn' onClick={handleRegister}>
-                  Submit
-                  </button>
+                  {loading ?  <div className="spinner"></div> : 'Register'}
+                </button>
               </div>
+           
             </div>
-            <div className="box-2"></div>
+            <div className="boxxx-2"></div>
           </div>
         </div>
       </section>

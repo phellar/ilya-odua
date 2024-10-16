@@ -115,7 +115,7 @@ const Home = () => {
 
 
             {/* <!-- OUR GALLERY--> */}
-            <section class="gallery scroll">
+            {/* <section class="gallery scroll">
               <div class="container">
                 <div class="heading">
                   <h1>Our Gallery</h1>
@@ -130,7 +130,7 @@ const Home = () => {
                     <Link to='/gallery' className='CTA'>View More</Link>
                   </div>
               </div>
-            </section>
+            </section> */}
 
 
             <Event/>

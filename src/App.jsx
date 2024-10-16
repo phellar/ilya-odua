@@ -15,11 +15,12 @@ import Gallery from './Pages/Gallery'
 import Hemisphere from './Pages/Hemisphere'
 import Member from './Pages/Member'
 import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
-import Image from './Pages/Image'
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
+
+import MembersList from './Pages/MembersList'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 
@@ -47,30 +48,30 @@ function App() {
     //   duration: 2
     // })
 
-    tl_2.from(".info-new",{
-      x: -1000,
-      duration: 2
-    })
-    tl_2.from(".heading",{
-      x: -1000,
-      duration: 2
-    })
+    // tl_2.from(".info-new",{
+    //   x: -1000,
+    //   duration: 2
+    // })
+    // tl_2.from(".heading",{
+    //   x: -1000,
+    //   duration: 2
+    // })
 
-    tl_2.from(".card-wrapper",{
-      opacity:0,
-      y: 50,
-      duration: 2
-    },2)
-    tl_2.from(".card-group",{
-      opacity:0,
-      y: 50,
-      duration: 2
-    },2)
+    // tl_2.from(".card-wrapper",{
+    //   opacity:0,
+    //   y: 50,
+    //   duration: 2
+    // },2)
+    // tl_2.from(".card-group",{
+    //   opacity:0,
+    //   y: 50,
+    //   duration: 2
+    // },2)
 
-    tl_2.from(".img-new",{
-      x: 11000,
-      duration: 2
-    })
+    // tl_2.from(".img-new",{
+    //   x: 11000,
+    //   duration: 2
+    // })
 
   });
 
@@ -125,9 +126,9 @@ function App() {
           <Route path= "/history-ilya-Odua" element={<HistoryIlyaOdua/>} />
           <Route path= "/upload" element={<Upload/>} />
           <Route path= "/gallery" element={<Gallery/>} />
-          <Route path= "/image" element={<Image/>} />
           <Route path= "/hemisphere" element={<Hemisphere/>} />
           <Route path= "/member/:id" element={<Member/>} />
+          <Route path= "/members/:kegYear" element={<MembersList />} />
          
           </Routes> 
         </Router>
