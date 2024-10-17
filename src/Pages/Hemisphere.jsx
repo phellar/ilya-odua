@@ -243,7 +243,7 @@ const handleToggle11 = ()=>{
                 </div>
                 <div className="question">
                     <div className="fa">
-                        <h1> THE KEGITES CLUB <span class="highlight">ONDO</span> HEMISPHERE</h1>
+                        <h1> THE KEGITES CLUB <span class="highlight">ONDO - EKITI</span> HEMISPHERE</h1>
                         {isToggled5 ? 
                         
                         <ul>
@@ -388,6 +388,51 @@ const handleToggle11 = ()=>{
                         <p></p>}
                     </div>
                         {isToggled8 ? <p onClick={handleToggle8}><FaMinus /></p> : <p onClick={handleToggle8}><FaPlus /></p>}
+                </div>
+                <div className="question">
+                    <div className="fa">
+                        <h1> THE KEGITES CLUB <span class="highlight">NORTHERN</span> HEMISPHERE</h1>
+                        {isToggled9 ? 
+                        
+                        <ul>
+                        <li>
+                        Ilya Du Solar (Federal Polytechnic, Bida.)                                            
+                    </li>
+                    <li>
+                        Ilya Du Komputa (Federal University of Technology, Minna.)
+                    </li>
+                    <li>
+                        Ilya Du Rock (University of Jos, Jos.)                       
+                    </li>
+                    <li>
+                        Ilya Du Kotang (Federal College of Education, Kotangora)                        
+                    </li>
+                        <li>
+                            Ilya Du Arewa (Kaduna Polytechnic, Kaduna.)
+                        </li>
+                        <li>
+                            Ilya Du Desert (Federal Polytechnic, Birnin-Kebbi.)                       
+                        </li>
+                        <li>
+                            Ilya Du Turban
+                            (Ahmadu Bello University, Zaria.)     
+                        </li>
+                        <li>
+                            Ilya Du ZauZau
+                            (College of Education, Zaria.)
+                        </li>
+                        <li>
+                            Ilya Du Rima
+                            (Usman Dan Fodio University, Sokoto.)
+                        </li>
+                        
+                        </ul>
+                        
+                        : 
+                        
+                        <p></p>}
+                    </div>
+                        {isToggled9 ? <p onClick={handleToggle9}><FaMinus /></p> : <p onClick={handleToggle9}><FaPlus /></p>}
                 </div>
                 <div className="question">
                     <div className="fa">

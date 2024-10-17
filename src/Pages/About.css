@@ -1,0 +1,17 @@
+strong{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.about-info p{
+    font-size: 20px;
+}
+
+.about-info{
+    padding: 20px;
+}
+
+.ab{
+    margin: 20px 0px;
+}

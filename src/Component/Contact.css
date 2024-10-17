@@ -1,0 +1,86 @@
+.contact{
+    padding-top: 4rem;
+    height: 600px;
+    border-radius: 20px;
+    width: 100vw;
+    color: white;
+  
+}
+
+.contact h2 {
+    font-size: 45px;
+    /* line-height: 1.5; */
+}
+
+.contact-box{
+    padding: 20px;
+    height: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.114);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:  #2BB32A;
+}
+
+
+
+
+.small-card{
+    width: 230px;
+    display: flex;
+    font-size: 28px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+}
+
+.small-card p{
+    font-size: 16px;
+    margin: 13px;
+}
+
+.split{
+    display: flex;
+    gap: 20rem;
+    /* justify-content: space-between; */
+    padding-top: 40px;
+}
+
+@media screen and (max-width:768px) {
+    .contact{
+        height: 1000px;
+    }
+    .contact-box{
+        height: 800px;
+    }
+
+    .split{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .social{
+        margin-top: 30px;
+    }
+
+    .small-card{
+        width: 280px;
+        font-size: 32px;
+    }
+
+    .small-card p{
+        font-size: 20px;
+    }
+
+    .social h5{
+        font-size: 20px;
+        margin-bottom: 20px;
+        color:  #2BB32A;
+    }
+}

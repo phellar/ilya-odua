@@ -17,10 +17,10 @@ import Member from './Pages/Member'
 import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
+import MembersList from './Pages/MembersList'
+import About from './Pages/About'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
-
-import MembersList from './Pages/MembersList'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 
@@ -129,6 +129,7 @@ function App() {
           <Route path= "/hemisphere" element={<Hemisphere/>} />
           <Route path= "/member/:id" element={<Member/>} />
           <Route path= "/members/:kegYear" element={<MembersList />} />
+          <Route path= "/about" element={<About />} />
          
           </Routes> 
         </Router>

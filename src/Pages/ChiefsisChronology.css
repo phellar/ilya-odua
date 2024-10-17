@@ -71,7 +71,7 @@
     }
 
     .keg-year-list{
-        flex-direction: column;
+        justify-content: space-around;
     }
     
 }

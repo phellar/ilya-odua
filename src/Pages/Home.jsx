@@ -1,6 +1,7 @@
 import React from 'react' 
 import { useEffect } from 'react'
 import Header from '../Component/Header'
+import Contact from '../Component/Contact'
 import FAQ from '../Component/FAQ'
 import Footer from '../Component/Footer'
 import Event from '../Component/Event'
@@ -135,6 +136,8 @@ const Home = () => {
 
             <Event/>
             <FAQ/>
+            <Contact/>
+            
             <Footer/>
 
 

@@ -12,7 +12,7 @@ const Lord = () => {
    <Header/>
    <section>
    <div className="heading-new">
-    <h1> <span className='highlight'> Ilya Odua </span> Present Glords</h1>
+    <h1> <span className='highlight'> Ilya Odua </span> Present G-lords</h1>
     <p>2024/2025 KEGITE YEAR</p>
    </div>
     <div className="container">

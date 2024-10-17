@@ -34,7 +34,8 @@ const KegYear = () => {
     kegyear: '',
     picture: null,
     dob: '',
-    email: ''
+    email: '',
+    phone: ''
   });
 
   const handleChange = (e) => {
@@ -49,8 +50,8 @@ const KegYear = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
   
-    const { FullName, portfolio, kegyear, dob, email } = form;
-    if (!FullName || !portfolio || !dob || !kegyear || !email) {
+    const { FullName, portfolio, kegyear, dob, email, phone } = form;
+    if (!FullName || !portfolio || !dob || !kegyear || !email || !phone) {
       alert('Please fill all the info');
       return;
     }
@@ -104,7 +105,8 @@ const KegYear = () => {
           kegyear, 
           dob, 
           email, 
-          picture: data.publicUrl
+          picture: data.publicUrl,
+          phone
         }]);
   
       if (error) {
@@ -163,6 +165,16 @@ const KegYear = () => {
                   type="email"
                   onChange={handleChange}
                   value={form.email}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone</label>
+                <input className='form-Input'
+                  placeholder='Phone Number'
+                  name="phone"
+                  type="number"
+                  onChange={handleChange}
+                  value={form.phone}
                 />
               </div>
 
@@ -224,6 +236,10 @@ const KegYear = () => {
                     <option value="Welfaress">Welfaress</option>
                     <option value="Le-Pour">Le-Pour</option>
                     <option value="Tapper">Tapper</option>
+                    <option value="Spedu">SPEDU</option>
+                    <option value="hod">Head of Drumitos (HOD)</option>
+                    <option value="dod">Director of Drumitos (DOD)</option>
+                    <option value="hos">Head of Songitos (HOS)</option>
                 </select>
               </div>
 

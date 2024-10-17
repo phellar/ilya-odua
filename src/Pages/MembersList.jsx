@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom'; // Import useParams to get URL par
 import supabase from '../Config/SupabaseClient';
 import Header from '../Component/Header';
 import Footer from '../Component/Footer';
+import { MdOutlinePhone } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
+import { CiCalendarDate } from "react-icons/ci";
+
 import './MembersList.css'
 
 const MembersList = () => {
@@ -53,7 +57,10 @@ const MembersList = () => {
 
                                     <div className="card-desc">
                                         <h2 className='highlight-new' id='chief-name'>{member.FullName}</h2>
-                                         <h3>AB {member.portfolio}</h3>
+                                         <h2>AB {member.portfolio}</h2>
+                                         <h3><MdOutlinePhone /> 0{member.phone}</h3>
+                                         {/* <h3><MdOutlineEmail /> {member.email}</h3> */}
+                                         <h3><CiCalendarDate /> {member.dob}</h3>
                                      </div>
                                     <h3></h3>
                                 </div>

@@ -3,11 +3,13 @@ img{
 }
 
 .res{
-    padding: 30px 30px;
+    padding: 20px;
+    font-size: 32px;
 }
+
 
 @media screen and (max-width: 768px) {
     img{
-        width: 400px;
+        width: 350px;
     }
 }
