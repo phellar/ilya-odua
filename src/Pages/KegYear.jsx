@@ -138,7 +138,7 @@ const KegYear = () => {
       <section className='keg-year'>
         <div className="container">
           <div className="card-header">
-            <h1 className='reg'>Members Registration Page</h1>
+            <h1 className='reg'> <span class="highlight">Ilya Odua</span> Members Registration Page</h1>
             <p className='reg'>Kindly Put in your information for documentation<br /></p>
           </div>
          

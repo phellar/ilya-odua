@@ -53,7 +53,6 @@ const FAQ = () => {
     <section className='faq'>
         <div className="container">
             <h2 className='head'>Frequently Asked Questions</h2>
-
             <div className="question">
                 <div className="fa">
                      <h3>Is kegites Membership only open to students ?</h3>

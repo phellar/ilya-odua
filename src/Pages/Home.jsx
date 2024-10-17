@@ -5,6 +5,8 @@ import Contact from '../Component/Contact'
 import FAQ from '../Component/FAQ'
 import Footer from '../Component/Footer'
 import Event from '../Component/Event'
+import Affiliate from '../Component/Affiliate'
+import Support from '../Component/Support'
 import { FaHandshake } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
 import { TbStairsUp } from "react-icons/tb";
@@ -133,11 +135,11 @@ const Home = () => {
               </div>
             </section> */}
 
-
             <Event/>
+            <Affiliate/>
             <FAQ/>
             <Contact/>
-            
+            <Support/>
             <Footer/>
 
 

@@ -1,0 +1,81 @@
+.aff{
+    height: 600px;
+    margin-top: 40px;
+    color: white;
+    padding: 3rem 0px;
+}
+
+.aff-card{
+    height: 150px;
+    width: 300px;
+    background-color: #2BB32A;
+    /* background-color: rgba(255, 255, 255, 0.114);   */
+    /* backdrop-filter: blur(10px); */
+    /* padding: 15px;  */
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.aff-head{
+    font-size: 42px;
+    padding-bottom: 20px;
+}
+
+.aff-card:hover{
+        background-color: rgba(255, 255, 255, 0.114);
+}
+
+.aff a{
+    color: white;
+}
+
+
+.aff-card-img{
+    height: 80px;
+    width: 80px;
+}
+
+#arewa-img{
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    background: url('../assets/Arewa-odua-induction/UOUL3406.JPG') no-repeat center center/cover;
+}
+#arewa-img-1{
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    background: url('../assets/fajuyi.jpeg') no-repeat center center/cover;
+}
+#arewa-img-3{
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    background: url('../assets/aywa.jpg') no-repeat center center/cover;
+}
+#arewa-img-4{
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    background: url('../assets/Resurrection/XPFR6336.JPG') no-repeat center center/cover;
+}
+
+.image-overlay{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.638);
+    height: 150px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:768px) {
+    .aff{
+        height: 1100px;
+    }
+    .aff-head{
+        font-size: 42px;
+    }
+}
